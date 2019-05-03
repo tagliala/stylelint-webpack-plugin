@@ -1,4 +1,5 @@
 const StyleLintPlugin = require('../../');
+
 const webpack = require('./webpack');
 
 const configFilePath = getPath('./.stylelintrc');

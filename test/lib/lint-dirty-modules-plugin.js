@@ -4,6 +4,7 @@ const td = require('testdouble');
 const runCompilation = td.replace('../../lib/run-compilation');
 
 const { string: formatter } = require('stylelint').formatters;
+
 const LintDirtyModulesPlugin = require('../../lib/lint-dirty-modules-plugin');
 const { defaultFilesGlob: glob } = require('../../lib/constants');
 
@@ -72,9 +73,9 @@ describe('lint-dirty-modules-plugin', () => {
         fileTimestamps: {},
       };
       td.when(getChangedFilesStub({}, glob)).thenReturn([]);
-      td
-        .when(getChangedFilesStub(fileTimestamps, glob))
-        .thenReturn(Object.keys(fileTimestamps));
+      td.when(getChangedFilesStub(fileTimestamps, glob)).thenReturn(
+        Object.keys(fileTimestamps)
+      );
       pluginMock = {
         getChangedFiles: getChangedFilesStub,
         compiler: compilerMock,
