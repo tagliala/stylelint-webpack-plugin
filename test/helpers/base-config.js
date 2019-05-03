@@ -6,6 +6,7 @@ const configFilePath = getPath('./.stylelintrc');
 
 const baseConfig = {
   entry: './index',
+  mode: 'development',
   output: {
     path: getPath('output'),
   },
@@ -24,10 +25,6 @@ if (typeof webpack.LoaderOptionsPlugin === 'undefined') {
       debug: false,
     })
   );
-}
-
-if (process.env.WEBPACK_VERSION === '4') {
-  baseConfig.mode = 'development';
 }
 
 module.exports = baseConfig;
