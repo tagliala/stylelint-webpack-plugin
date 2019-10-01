@@ -32,18 +32,11 @@ function apply(options, compiler) {
   } else {
     const runner = runCompilation.bind(this, options);
 
-    if (compiler.hooks) {
-      const pluginName = 'StylelintWebpackPlugin';
-      compiler.hooks.run.tapAsync(pluginName, runner);
-      compiler.hooks.watchRun.tapAsync(pluginName, (compiler, done) => {
-        runner(compiler, done);
-      });
-    } else {
-      compiler.plugin('run', runner);
-      compiler.plugin('watch-run', (watcher, done) => {
-        runner(watcher.compiler, done);
-      });
-    }
+    const pluginName = 'StylelintWebpackPlugin';
+    compiler.hooks.run.tapAsync(pluginName, runner);
+    compiler.hooks.watchRun.tapAsync(pluginName, (compiler, done) => {
+      runner(compiler, done);
+    });
   }
 }
 
