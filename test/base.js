@@ -106,7 +106,7 @@ describe('stylelint-webpack-plugin', () => {
     return pack(assign({}, baseConfig, config))
       .then(expect.fail)
       .catch((err) => {
-        expect(err.message).to.match(/duplicated mapping key|Failed to parse/);
+        expect(err.message).to.match(/Map keys must be unique; "color-hex-length" is repeated/);
       });
   });
 
