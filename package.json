@@ -54,9 +54,9 @@
     "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
     "@webpack-contrib/eslint-config-webpack": "^3.0.0",
@@ -70,9 +70,9 @@
     "del": "^5.1.0",
     "del-cli": "^3.0.0",
     "dotenv": "^8.2.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "memory-fs": "^0.5.0",
@@ -83,7 +83,7 @@
     "standard-version": "^7.0.1",
     "stylelint": "^12.0.0",
     "testdouble": "^3.12.4",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-defaults": "^4.0.0"
   },
   "pre-commit": "lint-staged",
